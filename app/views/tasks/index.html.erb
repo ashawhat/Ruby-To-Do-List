@@ -2,6 +2,27 @@
 
 <ul>
   <% @tasks.each do |task| %>
+  <li><a href="/tasks/<%= task.id%>"><%= task.name %></a></li>
+  <% end %>
+</ul>
+
+<p><a href="/tasks/new">Add a Task</a></p>
+
+<h2>Done Tasks</h2>
+<ul>
+  <% @done_tasks.each do |task| %>
   <li><%= task.name %></li>
   <% end %>
 </ul>
+
+
+<h2>Not Done Tasks</h2>
+<ul>
+  <% @not_done_tasks.each do |task| %>
+  <li><%= task.name %></li>
+  <% end %>
+</ul>
+
+
+
+
